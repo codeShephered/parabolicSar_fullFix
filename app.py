@@ -196,7 +196,7 @@ def _process(instrument: str) -> None:
     sma20   = sum(c.close for c in hist[-sma_n:]) / sma_n if sma_n else price
     below   = (sma20 - price) / sma20 * 100
     above   = (price - sma20) / sma20 * 100
-    tol     = config.TREND_FILTER_PCT
+    #tol     = config.TREND_FILTER_PCT
 
     pattern, direction = pattern_engine.scan(last3)
     if not pattern:
